@@ -300,3 +300,15 @@ _deps
 build.ninja
 # Build directory
 /build
+
+# PSP specific
+*.pbp
+*.elf
+*.prx
+*.PBP
+PARAM.SFO
+*.SFO
+
+# Downloaded archives / temp files
+*.tar.gz
+*.deb
