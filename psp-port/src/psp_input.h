@@ -1,7 +1,5 @@
 #pragma once
 
-#ifdef PSP_PORT
-
 #include <pspctrl.h>
 
 class PspInput
@@ -16,5 +14,3 @@ private:
     static SceCtrlData currentState;
     static SceCtrlData previousState;
 };
-
-#endif

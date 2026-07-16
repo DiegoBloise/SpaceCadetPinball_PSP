@@ -143,10 +143,6 @@ void TTextBox::Display(const char* text, float time, bool lowPriority)
 	}
 }
 
-void TTextBox::DrawImGui()
-{
-}
-
 void TTextBox::Draw()
 {
 	auto bmp = BgBmp;

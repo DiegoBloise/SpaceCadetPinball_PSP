@@ -1,5 +1,3 @@
-#ifdef PSP_PORT
-
 #include "psp_input.h"
 #include <pspkernel.h>
 
@@ -27,5 +25,3 @@ bool PspInput::IsButtonJustPressed(unsigned int button)
 {
     return ((currentState.Buttons & button) != 0) && ((previousState.Buttons & button) == 0);
 }
-
-#endif

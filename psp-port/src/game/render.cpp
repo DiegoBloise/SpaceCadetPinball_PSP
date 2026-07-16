@@ -8,7 +8,6 @@
 #include "score.h"
 #include "TPinballTable.h"
 #include "winmain.h"
-#include "DebugOverlay.h"
 #include "proj.h"
 
 std::vector<render_sprite*> render::sprite_list, render::ball_list;
@@ -134,7 +133,6 @@ void render::uninit()
 		delete ball_list[0];
 	for (auto& ballBmp : ball_bitmap)
 		delete ballBmp;
-	DebugOverlay::UnInit();
 }
 
 void render::recreate_screen_texture()
@@ -429,10 +427,5 @@ void render::PresentVScreen()
 		SDL_RenderCopy(winmain::Renderer, vscreen->Texture, &srcBoardRect, &dstBoardRect);
 		SDL_RenderCopy(winmain::Renderer, vscreen->Texture, &srcSidebarRect, &dstSidebarRect);
 #endif
-	}
-
-	if (options::Options.DebugOverlay)
-	{
-		DebugOverlay::DrawOverlay();
 	}
 }

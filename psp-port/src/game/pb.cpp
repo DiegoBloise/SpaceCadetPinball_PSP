@@ -37,7 +37,7 @@ float pb::BallMaxSpeed, pb::BallHalfRadius, pb::BallToBallCollisionDistance;
 float pb::IdleTimerMs = 0;
 bool pb::FullTiltMode = false, pb::FullTiltDemoMode = false, pb::cheat_mode = false, pb::demo_mode = false, pb::CreditsActive = false;
 std::string pb::DatFileName, pb::BasePath;
-ImU32 pb::TextBoxColor;
+uint32_t pb::TextBoxColor;
 int pb::quickFlag = 0;
 TTextBox *pb::InfoTextBox, *pb::MissTextBox;
 
@@ -113,7 +113,7 @@ int pb::init()
 	auto fontColor = get_rc_string(Msg::TextBoxColor);
 	if (fontColor)
 		sscanf(fontColor, "%d %d %d", &red, &green, &blue);
-	TextBoxColor = IM_COL32(red, green, blue, 255);
+	TextBoxColor = static_cast<uint32_t>(red) | (static_cast<uint32_t>(green) << 8) | (static_cast<uint32_t>(blue) << 16) | (255u << 24);
 
 	return 0;
 }
@@ -570,10 +570,6 @@ void pb::InputDown(GameInput input)
 	}
 
 	const auto bindings = options::MapGameInput(input);
-	for (const auto binding : bindings)
-	{
-		winmain::HandleGameBinding(binding, true);
-	}
 
 	if (game_mode != GameModes::InGame || winmain::single_step || demo_mode)
 		return;
