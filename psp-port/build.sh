@@ -45,7 +45,7 @@ if [ -f "$EBOOT_PATH" ]; then
     echo ""
     echo "To install on PSP:"
     echo "  1. Copy EBOOT.PBP to ms0:/PSP/GAME/SpaceCadetPinball/"
-    echo "  2. Copy PINBALL.DAT to ms0:/PSP/GAME/SpaceCadetPinball/"
+    echo "  2. Copy PINBALL.DAT, sound fx files and PINBALL.WAV to ms0:/PSP/GAME/SpaceCadetPinball/"
     ls -lh "$EBOOT_PATH"
 else
     echo "Error: EBOOT.PBP not found at $EBOOT_PATH"
