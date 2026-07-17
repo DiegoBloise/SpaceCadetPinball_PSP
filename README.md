@@ -2,7 +2,8 @@
 
 PSP port of [SpaceCadetPinball](https://github.com/kktos/SpaceCadetPinball), a reverse engineering of `3D Pinball for Windows - Space Cadet`.
 
-![Screenshot](screenshot.png)
+![Screenshot PSP](screenshot-psp.jpg)
+![Screenshot Emulator](screenshot-emu.png)
 
 ## Building
 
@@ -28,21 +29,21 @@ Output: `psp-port/build/EBOOT.PBP`
 
 1. Create folder `ms0:/PSP/GAME/SpaceCadetPinball/` on your PSP
 2. Copy `EBOOT.PBP` to that folder
-3. Copy `PINBALL.DAT` (game data) to the same folder
+3. Copy `PINBALL.DAT`, sound fx files and `PINBALL.WAV` (game data) to the same folder
 
 ## Controls
 
-| Button | Action |
-|--------|--------|
-| L Trigger | Left flipper |
-| R Trigger | Right flipper |
-| Cross | Launch ball / Plunger |
-| D-Pad Left | Tilt left |
-| D-Pad Right | Tilt right |
-| D-Pad Up | Tilt up |
-| Triangle | Toggle music |
-| Start | Pause |
-| Select | New game |
+| Button      | Action                |
+| ----------- | --------------------- |
+| L Trigger   | Left flipper          |
+| R Trigger   | Right flipper         |
+| Cross       | Launch ball / Plunger |
+| D-Pad Left  | Tilt left             |
+| D-Pad Right | Tilt right            |
+| D-Pad Up    | Tilt up               |
+| Triangle    | Toggle music          |
+| Start       | Pause                 |
+| Select      | New game              |
 
 ## Credits
 
